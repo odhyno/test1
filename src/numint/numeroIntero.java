@@ -11,12 +11,12 @@ public class numeroIntero {
 	  
   }
 
-public int getNumber() {
+  public int getNumber() {
 	return number;
-}
+  }
 
-public void setNumber(int number) {
+  public void setNumber(int number) {
 	this.number = number;
-}
+  }
 
 }

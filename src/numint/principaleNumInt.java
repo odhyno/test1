@@ -12,12 +12,7 @@ public class principaleNumInt {
 		   int smm = smi.somma(ottantasette.getNumber(), settantotto.getNumber());
 		
 		   System.out.println(smm);
-		   
-     
-        
-        
-        
-        
+		        
 		
 	}
 
