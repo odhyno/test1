@@ -54,9 +54,4 @@
             <classpath refid="esercizi.classpath"/>
         </java>
     </target>
-    <target name="principalePunto">
-        <java classname="creapunto.principalePunto" failonerror="true" fork="yes">
-            <classpath refid="esercizi.classpath"/>
-        </java>
-    </target>
 </project>
