@@ -3,19 +3,21 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="creaP">
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="example">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../eclipse/java-2019-09/eclipse/"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
-    <path id="creaP.classpath">
+    <path id="example.classpath">
         <pathelement location="bin"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -30,7 +32,7 @@
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
-            <classpath refid="creaP.classpath"/>
+            <classpath refid="example.classpath"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
@@ -47,9 +49,9 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="principalePunto">
-        <java classname="creapunto.principalePunto" failonerror="true" fork="yes">
-            <classpath refid="creaP.classpath"/>
+    <target name="HiWorld">
+        <java classname="example.HiWorld" failonerror="true" fork="yes">
+            <classpath refid="example.classpath"/>
         </java>
     </target>
 </project>
