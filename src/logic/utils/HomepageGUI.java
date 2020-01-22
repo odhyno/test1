@@ -8,16 +8,17 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import logic.actors.User;
-import logic.control.ControlLogin;
 
 public class HomepageGUI {
 
-	public static VBox getHomepageScene(User user) {
+	public static VBox getHomepageScene() {
 
 		VBox root = new VBox();
 		Text title = new Text();
 		Text welcome = new Text();
 		HBox hbox = new HBox();
+
+		final User user = HomepageUtils.getUser();
 
 		title.setText("Homepage");
 		welcome.setText("Welcome " + user.getUsername() + "!!!");
@@ -33,13 +34,11 @@ public class HomepageGUI {
 		Button doAReportBTN = new Button("Do a Report");
 		Button viewRulesBTN = new Button("View Rules");
 
-		WindowManagerGUI win = new WindowManagerGUI();
-
 		homeBTN.setOnAction(new EventHandler<ActionEvent>() {
 
 			public void handle(ActionEvent event) {
 
-				win.loadHomePage(user);
+				WindowManagerGUI.loadHomePage();
 			}
 		});
 
@@ -47,7 +46,7 @@ public class HomepageGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadMessagesPage();
+				WindowManagerGUI.loadMessagesPage();
 			}
 		});
 
@@ -55,7 +54,7 @@ public class HomepageGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadProfilePage();
+				WindowManagerGUI.loadProfilePage();
 			}
 		});
 
@@ -63,8 +62,8 @@ public class HomepageGUI {
 
 			public void handle(ActionEvent event) {
 
-				ControlLogin ctrlLogin = new ControlLogin();
-				win.loadLoginPage();
+				HomepageUtils.setLog();
+				WindowManagerGUI.loadLoginPage();
 			}
 		});
 
@@ -72,7 +71,7 @@ public class HomepageGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadSamplePostPage();
+				WindowManagerGUI.loadSamplePostPage();
 			}
 		});
 
@@ -80,7 +79,7 @@ public class HomepageGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadMemberBandPage();
+				WindowManagerGUI.loadMemberBandPage();
 			}
 		});
 
@@ -88,7 +87,7 @@ public class HomepageGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadTopicPage();
+				WindowManagerGUI.loadTopicPage();
 			}
 		});
 
@@ -96,7 +95,7 @@ public class HomepageGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadRankingPage();
+				WindowManagerGUI.loadRankingPage();
 			}
 		});
 
@@ -104,7 +103,7 @@ public class HomepageGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadDoAReportPage();
+				WindowManagerGUI.loadDoAReportPage();
 			}
 		});
 
@@ -112,14 +111,15 @@ public class HomepageGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadViewRulesPage();
+				WindowManagerGUI.loadViewRulesPage();
 			}
 		});
 
 		hbox.setAlignment(Pos.CENTER);
 		hbox.getChildren().addAll(homeBTN, messagesBTN, profileBTN, logoutBTN);
 		root.setAlignment(Pos.CENTER);
-		root.getChildren().addAll(title, hbox, samplePostBTN, searchMemberBandBTN, topicBTN, rankingBTN, doAReportBTN, viewRulesBTN);
+		root.getChildren().addAll(title, welcome, hbox, samplePostBTN, searchMemberBandBTN, topicBTN, rankingBTN,
+				doAReportBTN, viewRulesBTN);
 
 		return root;
 	}

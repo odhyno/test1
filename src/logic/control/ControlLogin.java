@@ -45,12 +45,12 @@ public class ControlLogin {
 		return result;
 	}
 
-	public User getUser(String username, String password) {
-		
-		User user = new User();
-		user.getUserFromUsernameAndPassword(username, password);
-		return user;
-		
+	public User getUserFromUsernameAndPassword(String username, String password) {
+
+		UserDAO userDAO = new UserDAO();
+
+		return userDAO.getUserFromUsernameAndPassword(username, password);
+
 	}
 
 }

@@ -11,77 +11,67 @@ import logic.utils.WindowManagerGUI;
 public class SendMessagesGUI {
 
 	public static VBox getMessagesScene() {
-		VBox root= new VBox();
-		Text title=new Text();
+		VBox root = new VBox();
+		Text title = new Text();
 		title.setText("messaggi");
-		
-		Button sendMessageBTN=new Button("invia messaggio");
-		Button homePageBTN=new Button("home");
-		Button logOutBTN=new Button("logout");
-		Button profileBTN=new Button("prfile");
-		Button backBTN=new Button("indietro");
-		
-		WindowManagerGUI win = new WindowManagerGUI();
-		
+
+		Button sendMessageBTN = new Button("Send message");
+		Button homePageBTN = new Button("Home");
+		Button logoutBTN = new Button("Logout");
+		Button profileBTN = new Button("Profile");
+		Button backBTN = new Button("Back");
+
 		sendMessageBTN.setOnAction(new EventHandler<ActionEvent>() {
-			
+
 			public void handle(ActionEvent event) {
-				
-				//TODO Not implemented yet.
-				
+
+				// TODO Not implemented yet.
+
 			}
 		});
-		
-		homePageBTN.setOnAction(new EventHandler<ActionEvent>(){
-				
+
+		homePageBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-				
-				//win.loadHomePage();
-				
+
+				WindowManagerGUI.loadHomePage();
+
 			}
 		});
-		
-		logOutBTN.setOnAction(new EventHandler<ActionEvent>() {
-			
+
+		logoutBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-				
-				win.loadLoginPage();
+
+				WindowManagerGUI.loadLoginPage();
 			}
 		});
-		
+
 		profileBTN.setOnAction(new EventHandler<ActionEvent>() {
-			
+
 			public void handle(ActionEvent event) {
-					
-				win.loadProfilePage();
-				
+
+				WindowManagerGUI.loadProfilePage();
+
 			}
-			
+
 		});
-		
+
 		backBTN.setOnAction(new EventHandler<ActionEvent>() {
-			
+
 			public void handle(ActionEvent event) {
-				
-				//win.loadHomePage();
-			
+
+				WindowManagerGUI.loadHomePage();
+
 			}
-		
+
 		});
-		
+
 		root.setAlignment(Pos.CENTER);
-		root.getChildren().addAll(title,sendMessageBTN, homePageBTN, logOutBTN,backBTN);
-		
+		root.getChildren().addAll(title, sendMessageBTN, homePageBTN, logoutBTN, backBTN);
+
 		return root;
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
 }

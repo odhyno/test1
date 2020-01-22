@@ -24,9 +24,8 @@ public class User {
 
 	}
 
-	public User(int idUtente2, String username2, String password2, String email2, String firstname2,
-			String lastname2, Date subsDate2, Date birthDate2, String zone2, String instrPlayed2, Boolean band2,
-			String nameBand2) {
+	public User(int idUtente2, String username2, String password2, String email2, String firstname2, String lastname2,
+			Date subsDate2, Date birthDate2, String zone2, String instrPlayed2, Boolean band2, String nameBand2) {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -125,7 +124,7 @@ public class User {
 	public void setNameBand(String nameBand) {
 		this.nameBand = nameBand;
 	}
-	
+
 	public String getLogged() {
 		return logged;
 	}
@@ -146,13 +145,26 @@ public class User {
 		return result;
 	}
 
-	public User getUserFromUsernameAndPassword(String username, String password) {
+	/*public User getUserFromUsernameAndPassword(String username, String password) {
 
-		User user = new User();
 		UserDAO userDAO = new UserDAO();
-		user = userDAO.getData(username, password);
-		
+		User user = userDAO.getUserFromUsernameAndPassword(username, password);
+
 		return user;
-		
+
+	}*/
+
+	public void setDefaultNotLogged() {
+
+		UserDAO userDAO = new UserDAO();
+		userDAO.setDefaultNotLogged();
+
+	}
+
+	public void setNotLogged(String username) {
+
+		UserDAO userDAO = new UserDAO();
+		userDAO.setNotLogged(username);
+
 	}
 }

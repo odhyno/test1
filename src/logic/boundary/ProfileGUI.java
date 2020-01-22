@@ -13,7 +13,6 @@ public class ProfileGUI {
 	public static VBox getProfileScene() {
 
 		VBox root = new VBox();
-		WindowManagerGUI win = new WindowManagerGUI();
 		HBox hbox = new HBox();
 		Text title = new Text();
 
@@ -31,7 +30,7 @@ public class ProfileGUI {
 
 			public void handle(ActionEvent event) {
 
-				//win.loadHomePage();
+				// win.loadHomePage();
 			}
 		});
 
@@ -39,7 +38,7 @@ public class ProfileGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadMessagesPage();
+				WindowManagerGUI.loadMessagesPage();
 			}
 		});
 
@@ -47,7 +46,7 @@ public class ProfileGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadProfilePage();
+				WindowManagerGUI.loadProfilePage();
 			}
 		});
 
@@ -55,7 +54,7 @@ public class ProfileGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadLoginPage();
+				WindowManagerGUI.loadLoginPage();
 			}
 		});
 
@@ -63,7 +62,7 @@ public class ProfileGUI {
 
 			public void handle(ActionEvent event) {
 
-				//win.loadHomePage();
+				// win.loadHomePage();
 			}
 		});
 

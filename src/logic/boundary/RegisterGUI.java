@@ -47,7 +47,6 @@ public class RegisterGUI {
 		TextField nameBandField = new TextField();
 
 		ControlRegister ctrlRegister = new ControlRegister();
-		WindowManagerGUI win = new WindowManagerGUI();
 
 		usernameField.setMaxWidth(200);
 		usernameField.setAlignment(Pos.CENTER_LEFT);
@@ -176,7 +175,7 @@ public class RegisterGUI {
 						bandField.setSelected(false);
 						nameBandField.clear();
 						ctrlRegister.registrationAlert();
-						win.loadLoginPage();
+						WindowManagerGUI.loadLoginPage();
 					}
 
 				}
@@ -187,7 +186,7 @@ public class RegisterGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadLoginPage();
+				WindowManagerGUI.loadLoginPage();
 			}
 
 		});

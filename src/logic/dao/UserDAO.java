@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Date;
 
 import logic.actors.User;
 import logic.utils.ConnectionDB;
@@ -12,6 +11,7 @@ import logic.utils.ConnectionDB;
 public class UserDAO {
 
 	static Connection con;
+	static User user = null;
 
 	// Funcs for LOGIN
 
@@ -61,7 +61,6 @@ public class UserDAO {
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -261,9 +260,13 @@ public class UserDAO {
 		return status;
 	}
 
-	public User getData(String username, String password) {
+	public User getUserFromUsernameAndPassword(String username, String password) {
 
-		User user = new User();
+		if (user != null) {
+
+			return user;
+		}
+
 		try {
 
 			con = ConnectionDB.dbConn();
@@ -271,6 +274,7 @@ public class UserDAO {
 			String sql = "SELECT * FROM utenti WHERE username = '" + username + "'";
 			ResultSet tempRs = tempSt.executeQuery(sql);
 			while (tempRs.next()) {
+				user = new User();
 				user.setId(tempRs.getInt("idUtente"));
 				user.setUsername(tempRs.getString("username"));
 				user.setPassword(tempRs.getString("password"));
@@ -283,7 +287,6 @@ public class UserDAO {
 				user.setInstrPlayed(tempRs.getString("instrplayed"));
 				user.setBand(tempRs.getInt("band"));
 				user.setNameBand(tempRs.getString("nameband"));
-				System.out.println(tempRs.getString("logged"));
 
 				String sql2 = "UPDATE utenti SET logged = 'LOGGATO' WHERE username = '" + username + "'";
 				Statement tempSt2 = con.createStatement();
@@ -291,10 +294,9 @@ public class UserDAO {
 				Statement tempSt3 = con.createStatement();
 				String sql3 = "SELECT logged FROM utenti WHERE username = '" + username + "'";
 				ResultSet rs3 = tempSt3.executeQuery(sql3);
-				if(rs3.next()) {
+				if (rs3.next()) {
 					user.setLogged(rs3.getString("logged"));
 				}
-				System.out.println(rs3.getString("logged"));
 			}
 
 			con.close();
@@ -305,6 +307,41 @@ public class UserDAO {
 		}
 
 		return user;
+	}
+
+	public void setDefaultNotLogged() {
+
+		try {
+
+			con = ConnectionDB.dbConn();
+			Statement tempSt = con.createStatement();
+			String sql = "UPDATE utenti SET logged = 'NON LOGGATO'";
+			tempSt.executeQuery(sql);
+
+			con.close();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
+	public void setNotLogged(String username) {
+
+		try {
+
+			con = ConnectionDB.dbConn();
+			Statement tempSt = con.createStatement();
+			String sql = "UPDATE utenti SET logged = 'NON LOGGATO' WHERE username = '" + username + "'";
+			tempSt.executeQuery(sql);
+
+			con.close();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
 	}
 
 }

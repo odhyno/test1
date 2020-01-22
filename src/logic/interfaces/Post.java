@@ -1,9 +1,10 @@
 package logic.interfaces;
 
-public class Post {
+public interface Post {
 
-	public Post() {
-		// TODO Auto-generated constructor stub
-	}
-
+	public void createPost();
+	public void modifyPost();
+	public void removePost();
+	
+	
 }

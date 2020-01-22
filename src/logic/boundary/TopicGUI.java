@@ -9,13 +9,12 @@ import javafx.scene.text.Text;
 import logic.utils.WindowManagerGUI;
 
 public class TopicGUI {
-	
+
 	public static VBox getTopicScene() {
-		
+
 		Text title = new Text("Topics");
 		VBox root = new VBox();
-		
-		WindowManagerGUI win = new WindowManagerGUI();
+
 		Button homeBTN = new Button("Social Music");
 		Button messagesBTN = new Button("Messages");
 		Button profileBTN = new Button("Profile");
@@ -24,77 +23,76 @@ public class TopicGUI {
 		Button filterByBTN = new Button("Filter By");
 		Button myTopicsBTN = new Button("My Topics");
 		Button newTopicBTN = new Button("New Topic");
-		
-		homeBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		homeBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-					
-			//	win.loadHomePage();
+
+				WindowManagerGUI.loadHomePage();
 			}
 		});
-		
-		messagesBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		messagesBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-					
-				win.loadMessagesPage();	
+
+				WindowManagerGUI.loadMessagesPage();
 			}
 		});
-		
-		profileBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		profileBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-					
-				win.loadProfilePage();
+
+				WindowManagerGUI.loadProfilePage();
 			}
 		});
-		
-		logoutBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		logoutBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-					
-				win.loadLoginPage();			
+
+				WindowManagerGUI.loadLoginPage();
 			}
 		});
-		
-		
-		
-		backBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		backBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-				
-			//	win.loadHomePage(); 
+
+				WindowManagerGUI.loadHomePage();
 			}
-			
+
 		});
-		
-		filterByBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		filterByBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-					
-				//TODO Not implemented yet.
+
+				// TODO Not implemented yet.
 			}
 		});
-		
-		myTopicsBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		myTopicsBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-					
-				//TODO Not implemented yet.
+
+				// TODO Not implemented yet.
 			}
 		});
-		
-		newTopicBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		newTopicBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-					
-				//TODO Not implemented yet.
+
+				// TODO Not implemented yet.
 			}
 		});
-		
+
 		root.setAlignment(Pos.CENTER);
-		root.getChildren().addAll(title,homeBTN,messagesBTN,profileBTN,logoutBTN,backBTN,filterByBTN,myTopicsBTN,newTopicBTN);
-		
+		root.getChildren().addAll(title, homeBTN, messagesBTN, profileBTN, logoutBTN, backBTN, filterByBTN, myTopicsBTN,
+				newTopicBTN);
+
 		return root;
 	}
 

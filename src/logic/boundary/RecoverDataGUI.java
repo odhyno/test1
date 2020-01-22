@@ -22,8 +22,7 @@ public class RecoverDataGUI {
 		Button backBTN = new Button("Back");
 
 		ControlRecoverData ctrlRecoverData = new ControlRecoverData();
-		WindowManagerGUI win = new WindowManagerGUI();
-		
+
 		title.setText("Recover Data: Insert your Email below");
 
 		emailField.setMaxWidth(350);
@@ -46,7 +45,7 @@ public class RecoverDataGUI {
 
 						ctrlRecoverData.sendEmail(emailField.getText());
 						ctrlRecoverData.mailSentAlert();
-						win.loadLoginPage();
+						WindowManagerGUI.loadLoginPage();
 
 					} else {
 
@@ -62,12 +61,12 @@ public class RecoverDataGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadLoginPage();
+				WindowManagerGUI.loadLoginPage();
 			}
 
 		});
 
-		root.getChildren().addAll(title,emailField, recoverDataBTN, backBTN);
+		root.getChildren().addAll(title, emailField, recoverDataBTN, backBTN);
 		root.setAlignment(Pos.CENTER);
 
 		return root;

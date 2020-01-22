@@ -10,64 +10,60 @@ import javafx.scene.text.Text;
 public class RankingGUI {
 
 	public static VBox getRankingScene() {
-		
+
 		VBox root = new VBox();
 		Text title = new Text("Ranking");
-		WindowManagerGUI win = new WindowManagerGUI();
 		Button homeBTN = new Button("Social Music");
 		Button messagesBTN = new Button("Messages");
 		Button profileBTN = new Button("Profile");
 		Button logoutBTN = new Button("Logout");
 		Button backBTN = new Button("Back");
-		
+
 		homeBTN.setOnAction(new EventHandler<ActionEvent>() {
-			
+
 			public void handle(ActionEvent event) {
-				
-				//win.loadHomePage();
+
+				WindowManagerGUI.loadMessagesPage();
 			}
 		});
-		
+
 		messagesBTN.setOnAction(new EventHandler<ActionEvent>() {
-			
+
 			public void handle(ActionEvent event) {
-				
-				win.loadMessagesPage();
+
+				WindowManagerGUI.loadMessagesPage();
 			}
 		});
-		
-		profileBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		profileBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-					
-				win.loadProfilePage();
+
+				WindowManagerGUI.loadProfilePage();
 			}
 		});
-		
-		logoutBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		logoutBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-					
-				win.loadLoginPage();			
+
+				WindowManagerGUI.loadLoginPage();
 			}
 		});
-		
-		
-		
-		backBTN.setOnAction(new EventHandler<ActionEvent>(){
-			
+
+		backBTN.setOnAction(new EventHandler<ActionEvent>() {
+
 			public void handle(ActionEvent event) {
-				
-				//win.loadHomePage(); 
+
+				WindowManagerGUI.loadMessagesPage();
 			}
-			
+
 		});
-		
+
 		root.setAlignment(Pos.CENTER);
-		root.getChildren().addAll(title,homeBTN,messagesBTN,profileBTN,logoutBTN,backBTN);
-		
+		root.getChildren().addAll(title, homeBTN, messagesBTN, profileBTN, logoutBTN, backBTN);
+
 		return root;
 	}
 
-	
 }

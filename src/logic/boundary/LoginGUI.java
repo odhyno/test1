@@ -9,7 +9,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import logic.actors.User;
 import logic.control.ControlLogin;
 import logic.utils.WindowManagerGUI;
 
@@ -31,8 +30,6 @@ public class LoginGUI {
 		Button loginBTN = new Button("Accedi");
 		Button registerBTN = new Button("Registrati");
 		Button recoverDataBTN = new Button("Recupera Dati");
-
-		WindowManagerGUI win = new WindowManagerGUI();
 
 		usernameField.setMaxWidth(200);
 		usernameField.setAlignment(Pos.CENTER_LEFT);
@@ -59,10 +56,9 @@ public class LoginGUI {
 					String result = ctrlLogin.checkIfRegistered(usernameField.getText(), passwordField.getText());
 
 					if (result.equals("trovato")) {
-						
-						User user = ctrlLogin.getUser(usernameField.getText(), passwordField.getText());
-	
-						win.loadHomePage(user);
+
+						WindowManagerGUI.setUserInHomePage(usernameField.getText(), passwordField.getText());
+						WindowManagerGUI.loadHomePage();
 
 					} else {
 
@@ -79,7 +75,7 @@ public class LoginGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadRegisterPage();
+				WindowManagerGUI.loadRegisterPage();
 			}
 		});
 
@@ -87,7 +83,7 @@ public class LoginGUI {
 
 			public void handle(ActionEvent event) {
 
-				win.loadRecoverDataPage();
+				WindowManagerGUI.loadRecoverDataPage();
 			}
 		});
 
