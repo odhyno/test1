@@ -1,0 +1,14 @@
+Come far funzionare il DB
+
+- Scaricare XAMPP
+Mettere la cartella "socialmusicdb" in C:\Xampp\mysql\data
+- Avviare XAMPP
+- Premere "start" su Apache e MySQL
+- Su Chrome (Mozilla, ecc...), cercare http://127.0.0.1/phpmyadmin/index.php
+- A sinistra, cercare socialmusicdb e sotto la tabella "utenti"
+
+In phpmyadmin:
+
+- Cliccando in alto su "Mostra", si osservano tutti i dati registrati nel DB
+- Cliccando in alto su "Struttura", si può modificare la tabella del DB
+- Cliccando a sinistra su "Nuova", si crea una nuova tabella nel DB
