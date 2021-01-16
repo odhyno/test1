@@ -1,0 +1,12 @@
+language: java
+jdk: 
+- openjdk8 
+
+addons:
+ sonarcloud:
+  organization: "odhyno"
+  token: "5a7ab12fec56bb0e57b501a5ed671c32910dca44"
+  
+script: 
+- ant build
+- sonar-scanner
