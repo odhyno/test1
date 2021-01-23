@@ -1,0 +1,71 @@
+.pane{
+    -fx-background-color: #ffffff;
+    -fx-background: #ffffff;
+}
+.title{
+    -fx-font-family: Helvetica;
+    -fx-font-style: bold;
+    -fx-font-size: 45;
+    -fx-text-fill: #ffffff;
+}
+.rectangle{
+    -fx-fill: #92cbff;
+    -fx-stroke: #92cbff;
+}
+.text-label {
+    -fx-font-family: Helvetica;
+    -fx-font-size: 22;
+    -fx-text-fill: #a8a8a8;
+}
+.text-field
+{
+    -fx-border-color: #eeeeee;
+    -fx-focus-color: transparent;
+    -fx-text-box-border: #000000;
+    -fx-faint-focus-color: transparent;
+    -fx-text-inner-color: #666666;
+    -fx-font-family: Helvetica;
+    -fx-font-size: 18;
+}
+
+.label{
+    -fx-font-family: Helvetica;
+    -fx-font-size: 22;
+    -fx-text-fill: #a8a8a8;
+}
+
+.popupText{
+    -fx-font-family: Helvetica;
+    -fx-font-size: 18;
+    -fx-text-fill: #70baff;
+}
+.loglabel {
+    -fx-font-family: Helvetica;
+    -fx-font-size: 16;
+    -fx-text-fill: #a8a8a8;
+}
+
+.date-picker .text-field {
+    -fx-control-inner-background: yellow ;
+}
+
+
+.date-picker-popup > .month-year-pane {
+    -fx-padding: 0.588883em 0.5em 0.666667em 0.5em;
+    -fx-background-color: yellow;
+    -fx-background-insets: 0 0 0 0, 0 0 1 0;
+}
+
+.check-box:selected > .box {
+    -fx-background-color: yellow;
+}
+
+.check-box > .box {
+    -fx-background-color: yellow;
+}
+
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    -fx-background-color: yellow;
+}
+
