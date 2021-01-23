@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="512.0" styleClass="pane" stylesheets="@../assets/stylesheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.RecoverDataGUI">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="629.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="512.0" />
+      <TextField fx:id="usernameField" alignment="CENTER" layoutX="54.0" layoutY="209.0" prefHeight="41.0" prefWidth="407.0" promptText="username" style="-fx-background-color: yellow;" />
+      <TextField fx:id="emailField" alignment="CENTER" layoutX="57.0" layoutY="276.0" prefHeight="41.0" prefWidth="407.0" promptText="email" style="-fx-background-color: yellow;" />
+      <Button fx:id="recoveryBTN" layoutX="199.0" layoutY="349.0" mnemonicParsing="false" onAction="#recoveryData" onMouseClicked="#RecoveryMouseClick" prefHeight="41.0" prefWidth="115.0" style="-fx-background-color: orange; -fx-border-color: WHITE;" text="RECOVERY DATA" />
+      <Button fx:id="backBTN" layoutX="199.0" layoutY="411.0" mnemonicParsing="false" onAction="#back" onMouseClicked="#backMouseClick" prefHeight="41.0" prefWidth="115.0" style="-fx-background-color: orange; -fx-border-color: WHITE;" text="BACK" />
+      <Text fill="ORANGE" layoutX="54.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recover Data: Insert your Username &amp; your Email below" textAlignment="CENTER" wrappingWidth="407.0" />
+      <Text fill="ORANGE" layoutX="147.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RECOVERY DATA" textAlignment="CENTER" wrappingWidth="226.13671875">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
