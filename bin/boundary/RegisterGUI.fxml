@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane id="pane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="512.0" styleClass="pane" stylesheets="@../assets/stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.RegisterGUI">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="627.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="512.0" />
+      <TextField fx:id="usernameField" alignment="CENTER" layoutX="34.0" layoutY="67.0" promptText="username" style="-fx-background-color: YELLOW;" />
+      <TextField fx:id="nameBandField" alignment="CENTER" layoutX="272.0" layoutY="310.0" promptText="selectNameBand" style="-fx-background-color: YELLOW;" visible="false" />
+      <TextField fx:id="emailField" alignment="CENTER" layoutX="115.0" layoutY="128.0" prefHeight="41.0" prefWidth="296.0" promptText="email" style="-fx-background-color: YELLOW;" />
+      <TextField fx:id="firstNameField" alignment="CENTER" layoutX="30.0" layoutY="186.0" promptText="First Name" style="-fx-background-color: YELLOW;" />
+      <TextField fx:id="zoneField" alignment="CENTER" layoutX="30.0" layoutY="249.0" promptText="Zone" style="-fx-background-color: YELLOW;" />
+      <TextField fx:id="lastNameField" alignment="CENTER" layoutX="272.0" layoutY="186.0" prefHeight="41.0" prefWidth="226.0" promptText="Last Name" style="-fx-background-color: YELLOW;" />
+      <TextField fx:id="instrumentField" alignment="CENTER" layoutX="272.0" layoutY="249.0" promptText="Instrument" style="-fx-background-color: YELLOW;" />
+      <Text fill="ORANGE" layoutX="176.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRATION" wrappingWidth="191.13671875">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Button fx:id="registerBTN" layoutX="216.0" layoutY="481.0" mnemonicParsing="false" onAction="#register" onMouseClicked="#registClick" prefHeight="41.0" prefWidth="79.0" style="-fx-background-color: ORANGE; -fx-border-color: WHITE; -fx-border-image-width: 5;" text="REGISTER" />
+      <Button fx:id="backBTN" layoutX="213.0" layoutY="543.0" mnemonicParsing="false" onAction="#back" onMouseClicked="#backClick" prefHeight="41.0" prefWidth="85.0" style="-fx-background-color: ORANGE; -fx-border-color: WHITE;" text="BACK" />
+      <CheckBox fx:id="bandCheckBox" contentDisplay="RIGHT" layoutX="26.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#nameBandVisible" prefHeight="35.0" prefWidth="242.0" style="-fx-background-image: YELLOW;" text="Are you in a Band?" textAlignment="RIGHT" textFill="ORANGE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <DatePicker fx:id="birthDateField" layoutX="159.0" layoutY="395.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="226.0" promptText="select date" style="-fx-background-color: YELLOW; -fx-background-image: YELLOW;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </DatePicker>
+      <TextField fx:id="passwordField" alignment="CENTER" layoutX="272.0" layoutY="67.0" promptText="password" style="-fx-background-color: YELLOW;" />
+   </children>
+</Pane>
