@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane id="pane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="512.0" style="-fx-background-color: BLACK;" styleClass="pane" stylesheets="@../assets/stylesheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.RegisterGUI">
+   <children>
+      <BorderPane prefHeight="512.0" prefWidth="512.0">
+         <bottom>
+            <AnchorPane prefHeight="141.0" prefWidth="512.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="registBTN" layoutX="97.0" layoutY="69.0" mnemonicParsing="false" onAction="#register" onMouseClicked="#registClick" prefHeight="47.0" prefWidth="86.0" style="-fx-background-color: ORANGE; -fx-border-color: WHITE; -fx-border-image-width: 5;" text="REGISTER" />
+                  <Button fx:id="backBTN" layoutX="323.0" layoutY="69.0" mnemonicParsing="false" onAction="#back" onMouseClicked="#backClick" prefHeight="47.0" prefWidth="86.0" style="-fx-background-color: ORANGE; -fx-border-color: WHITE;" text="BACK" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="201.0" prefWidth="512.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="usernameField" alignment="CENTER" layoutX="20.0" layoutY="72.0" promptText="username" style="-fx-background-color: YELLOW;" />
+                  <TextField fx:id="emailField" alignment="CENTER" layoutX="117.0" layoutY="146.0" prefHeight="41.0" prefWidth="296.0" promptText="email" style="-fx-background-color: YELLOW;" />
+                  <TextField fx:id="passwordField" alignment="CENTER" layoutX="265.0" layoutY="72.0" promptText="password" style="-fx-background-color: YELLOW;" />
+                  <Text fill="ORANGE" layoutX="160.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRATION" wrappingWidth="191.13671875">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="118.0" prefWidth="512.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="firstNameField" alignment="CENTER" layoutX="24.0" layoutY="14.0" promptText="First Name" style="-fx-background-color: YELLOW;" />
+                  <TextField fx:id="lastNameField" alignment="CENTER" layoutX="264.0" layoutY="14.0" prefHeight="41.0" prefWidth="226.0" promptText="Last Name" style="-fx-background-color: YELLOW;" />
+                  <DatePicker fx:id="birthDateField" layoutX="137.0" layoutY="115.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="226.0" promptText="select date" style="-fx-background-color: YELLOW; -fx-background-image: YELLOW;">
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
+                  </DatePicker>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</Pane>
