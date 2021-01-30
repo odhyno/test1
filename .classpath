@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="C:/Users/odhyno/Desktop/libreire mail db e logged/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/odhyno/Desktop/libreire mail db e logged/javax.mail-1.4.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/odhyno/Desktop/libreire mail db e logged/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/Users/odhyno/Desktop/libreire mail db e logged/mariadb-java-client-1.1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/odhyno/Desktop/libreire mail db e logged/mysql-connector-java-8.0.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/odhyno/Downloads/apache-tomcat-9.0.41-windows-x64/apache-tomcat-9.0.41/lib/servlet-api.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://docs.oracle.com/javaee/6/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/odhyno/Desktop/libreire mail db e logged/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

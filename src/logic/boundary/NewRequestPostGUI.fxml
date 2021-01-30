@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="sPBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="512.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.boundary.NewRequestPostGUI">
+   <top>
+      <AnchorPane id="sPtopAnchorPane" prefHeight="69.0" BorderPane.alignment="CENTER">
+         <children>
+			<Button id="nRPSocialMusicBTN" fx:id="nRPSocialMusicBTN" layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#homePageNRP" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100; -fx-background-color: Orange;">
+               <font>
+                  <Font size="12.0" />
+               </font>		
+            </Button>
+            <Button id="nRPLogoutBTN" fx:id="nRPLogoutBTN" layoutX="426.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#logoutNRP" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 100; -fx-background-color: ORANGE;">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button id="nRPProfileBTN" fx:id="nRPProfileBTN" layoutX="355.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#profileNRP" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 100; -fx-background-color: ORANGE;">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button id="nRPMessagesBTN" fx:id="nRPMessagesBTN" layoutX="280.0" layoutY="37.0" mnemonicParsing="false" onMouseClicked="#messagesNRP" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 100; -fx-background-color: ORANGE;">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <ImageView id="nRPKeyIMG" fx:id="nRPKeyIMG" fitHeight="80.0" fitWidth="80.0" layoutX="41.0" layoutY="14.0" onMouseClicked="#homePageNRP" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/chiaveDiViolino.png" />
+               </image>
+            </ImageView>
+            <Text id="nRPSocialMusicTXT" fx:id="nRPSocialMusicTXT" layoutX="33.0" layoutY="103.0" onMouseClicked="#homePageNRP" strokeType="OUTSIDE" strokeWidth="0.0" text="SocialMusic" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Text>
+            <ImageView id="nRPMessagesIMG" fx:id="nRPMessagesIMG" fitHeight="30.0" fitWidth="30.0" layoutX="295.0" layoutY="45.0" onMouseClicked="#messagesNRP" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Messages.png" />
+               </image>
+            </ImageView>
+            <Text id="nRPMessagesTXT" fx:id="nRPMessagesTXT" layoutX="288.0" layoutY="87.0" onMouseClicked="#messagesNRP" strokeType="OUTSIDE" strokeWidth="0.0" text="Messages">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Text>
+            <ImageView id="nRPProfileIMG" fx:id="nRPProfileIMG" fitHeight="30.0" fitWidth="30.0" layoutX="370.0" layoutY="45.0" onMouseClicked="#profileNRP" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Profile.png" />
+               </image>
+            </ImageView>
+            <Text id="nRPProfileTXT" fx:id="nRPProfileTXT" layoutX="371.0" layoutY="89.0" onMouseClicked="#profileNRP" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Text>
+            <ImageView id="mRSPLogoutIMG" fx:id="nRPLogoutIMG" fitHeight="30.0" fitWidth="30.0" layoutX="441.0" layoutY="39.0" onMouseClicked="#logoutNRP" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Logout.png" />
+               </image>
+            </ImageView>
+            <Text id="nRPLogoutTXT" fx:id="nRPLogoutTXT" layoutX="442.0" layoutY="89.0" onMouseClicked="#logoutNRP" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane id="sPBotPane" prefHeight="58.0" prefWidth="512.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="nRPBackBTN" fx:id="nRPBackBTN" layoutX="216.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#backNRP" prefWidth="80.0" style="-fx-background-radius: 30; -fx-background-color: ORANGE;" text="Back">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane id="sPCenterPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="nRPInsertBTN" fx:id="nRPInsertBTN" layoutX="218.0" layoutY="282.0" mnemonicParsing="false" onAction="#insertRequest" onMouseClicked="#insertRequestClick" prefWidth="80.0" style="-fx-background-radius: 30; -fx-background-color: ORANGE;" text="Insert">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <TextField id="nRPTitleTA" fx:id="nRPTitleTA" alignment="CENTER" layoutX="39.0" layoutY="40.0" prefHeight="31.0" prefWidth="434.0" promptText="Title" />
+            <Text id="sSPFilterTXT" fill="WHITE" layoutX="134.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert New Request Post" textAlignment="CENTER" wrappingWidth="237.6708984375">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField id="nRPDescriptionTA" fx:id="nRPDescriptionTA" alignment="TOP_CENTER" layoutX="43.0" layoutY="88.0" prefHeight="176.0" prefWidth="430.0" promptText="Description" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
